@@ -1,2 +1,4 @@
-# Live-Markdown-Editor
-A simple Markdown editor with live preview
+# Live Markdown Editor
+A simple browser-based [Markdown][1] editor with live preview.
+
+[1]: https://guides.github.com/features/mastering-markdown/
