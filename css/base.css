@@ -1,0 +1,66 @@
+body {
+    max-width: 75rem;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+div:focus { outline: none }
+
+img { width: 100% }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.flex-item {
+    width: 100%;
+}
+@media (min-width: 480px) {
+    .flex-item { width: 49% }
+}
+
+#markdown {
+    min-height: 75vh;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+@media (min-width: 480px) {
+    #markdown { margin-right: 1% }
+}
+
+#preview { display: none }
+@media (min-width: 480px) {
+    #preview {
+        display: block;
+        margin-left: 1%;
+    }
+}
+
+#toggle-fab {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+@media (min-width: 480px) {
+    #toggle-fab { display: none }
+}
+
+.mdc-fab {
+    color: #fff;
+    background-color: #000;
+}
+
+.markdown-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+.markdown-body pre,
+.markdown-body code {
+    font-family: 'Roboto Mono', monospace;
+}
