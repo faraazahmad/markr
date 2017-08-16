@@ -1,4 +1,8 @@
 # Live Markdown Editor
-A simple browser-based [Markdown][1] editor with live preview.
+[![Demo on GitHub][demo-shield]][demo-link]
 
-[1]: https://guides.github.com/features/mastering-markdown/
+A simple browser-based [Markdown][markdown-guide] editor with live preview.
+
+[demo-shield]: https://img.shields.io/badge/Demo-on_GitHub-blue.svg?style=flat-square
+[demo-link]: https://faheel.github.io/Live-Markdown-Editor
+[markdown-guide]: https://guides.github.com/features/mastering-markdown/
