@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000">
 
         <title>Live Markdown Editor</title>
 
@@ -11,20 +12,40 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.css">
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.min.css">
         <link rel="stylesheet" href="css/base.css">
     </head>
+
     <body>
-        <div class="flex-container">
-            <div id="markdown" class="flex-item" contenteditable></div>
-            <div id="preview" class="flex-item markdown-body"></div>
-        </div>
+        <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <span class="mdc-toolbar__title">Live Markdown Editor</span>
+                </section>
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+                    <span class="material-icons mdc-toolbar__icon toggle" aria-label="Menu" alt="Menu">more_vert</span>
+                    <div id="menu" class="mdc-simple-menu">
+                        <ul class="mdc-simple-menu__items mdc-list">
+                            <li class="mdc-list-item" role="menuitem">GitHub</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </header>
 
-        <button id="toggle-fab" class="mdc-fab material-icons" onclick="togglePreview()">
-            <span class="mdc-fab__icon">text_format</span>
-        </button>
+        <main>
+            <div class="flex-container mdc-toolbar-fixed-adjust">
+                <div id="markdown" class="flex-item" contenteditable></div>
+                <div id="preview" class="flex-item markdown-body"></div>
+            </div>
 
+            <button id="toggle-fab" class="mdc-fab material-icons no-select">
+                <span class="mdc-fab__icon">text_format</span>
+            </button>
+        </main>
+
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
         <script src="js/app.js"></script>
     </body>

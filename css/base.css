@@ -6,6 +6,9 @@ body {
     color: #333;
 }
 
+.mdc-toolbar { background-color: #000 }
+.mdc-toolbar__title { overflow: visible }
+
 div:focus { outline: none }
 
 img { width: 100% }
@@ -31,7 +34,10 @@ img { width: 100% }
     line-height: 1.25;
 }
 @media (min-width: 480px) {
-    #markdown { margin-right: 1% }
+    #markdown {
+        display: block;
+        margin-right: 1%;
+    }
 }
 
 #preview { display: none }
