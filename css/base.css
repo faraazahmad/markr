@@ -11,7 +11,7 @@ body {
 
 div:focus { outline: none }
 
-img { width: 100% }
+img { max-width: 100% }
 
 .flex-container {
     display: flex;
