@@ -4,6 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     color: #333;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .mdc-toolbar { background-color: #000 }
@@ -19,6 +20,14 @@ img { max-width: 100% }
     padding: 1rem;
     margin-bottom: 4rem;
 }
+
+textarea {
+    border: 0;
+    outline: none;
+    width: 100% !important;
+    overflow: auto;
+}
+
 
 .flex-item {
     width: 100%;

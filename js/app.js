@@ -1,46 +1,32 @@
 window.mdc.autoInit();  // initialise Material web components
 
-
-/*
-    Markdown preview
+/* 
+    Reactive Markdown Rendering using Vue.js
 */
-var markdown = document.getElementById('markdown');
-var preview = document.getElementById('preview');
-
-markdown.innerText = localStorage['markdown'] || 'Enter text here ...';
-
-var previousContent = '';
-// update preview if Markdown has changed
-setInterval(function() {
-    var currrentContent = markdown.innerText;
-    if (previousContent !== currrentContent) {
-        preview.innerHTML = marked(currrentContent);
-        localStorage['markdown'] = previousContent = currrentContent;
-    }
-}, 50); // check every 50ms
-
-
-/*
-    Menu
-*/
-var menuEl = document.querySelector('#menu');
-var menu = new mdc.menu.MDCSimpleMenu(menuEl);
-
-// toggle menu
-var toggle = document.querySelector('.toggle');
-toggle.addEventListener('click', function() {
-    menu.open = !menu.open;
+window.addEventListener('load', function() {
+    new Vue({
+        el: '#editor',
+        data: {
+          input: '# hello'
+        },
+        computed: {
+          compiledMarkdown: function () {
+            return marked(this.input, { sanitize: true })
+          }
+        },
+        methods: {
+          update: function (e) {
+            this.input = e.target.value
+          }
+        }
+    })
 });
 
-// handle menu item clicks
-menuEl.addEventListener('MDCSimpleMenu:selected', function(evt) {
-    const menuItem = evt.detail.item;
-    switch (menuItem.textContent.trim()) {
-        case "GitHub":
-            location.href = "https://github.com/faheel/Live-Markdown-Editor";
-            break;
-    }
-});
+/*
+    Nav Drawer
+*/
+let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-temporary-drawer'));
+document.querySelector('.menu').addEventListener('click', () => drawer.open = true);
 
 
 /*
@@ -53,6 +39,7 @@ var previewIsHidden = true;
 
 // handle FAB click
 fab.addEventListener('click', function() {
+    var markdown = document.querySelector('#markdown');
     if (previewIsHidden) {
         preview.style.display = 'block';
         markdown.style.display = 'none';
