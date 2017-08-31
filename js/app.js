@@ -26,8 +26,9 @@ window.addEventListener('load', function() {
     Nav Drawer
 */
 let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-temporary-drawer'));
-document.querySelector('.menu').addEventListener('click', () => drawer.open = true);
+let drawerToggle = document.querySelector('.menu');
 
+drawerToggle.addEventListener('click', () => drawer.open = true);
 
 /*
     FAB
