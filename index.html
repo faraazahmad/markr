@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#000">
-
+        <!-- jspdf and jquery libs -->
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <title>Markr - markdown Editor using Vue.js</title>
 
         <!-- Vue.js import -->
@@ -21,6 +24,7 @@
     </head>
 
     <body>
+
         <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
             <div class="mdc-toolbar__row">
                 <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
@@ -40,7 +44,7 @@
               </header>
               <nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
                 <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">picture_as_pdf</i>Save As PDF
+                    <i id='pdf' class="material-icons mdc-list-item__start-detail" aria-hidden="true">picture_as_pdf</i>Save As PDF
                 </a>
                 <a class="mdc-list-item" href="#">
                     <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">color_lens</i>Change theme

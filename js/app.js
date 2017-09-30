@@ -69,3 +69,39 @@ window.addEventListener("resize", function() {
         markdown.style.display = 'none';
     }
 });
+
+//handle save as PDF request
+
+$(".mdc-list-item:nth-child(1)").click(function() {
+  //print div#preview
+  Popup($('#preview')[0].outerHTML);
+});
+
+function Popup(data) {
+      var mywindow = window.open('', 'new div', 'height=400,width=600');
+      mywindow.document.write('<html><head><title></title>');
+      mywindow.document.write('<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">');
+      mywindow.document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.min.css">');
+      mywindow.document.write('<link rel="stylesheet" href="css/base.css" type="text/css" />');
+      mywindow.document.write('</head><body >');
+      mywindow.document.write(data);
+      mywindow.document.write('</body></html>');
+      mywindow.document.close();
+      mywindow.focus();
+      setTimeout(function(){mywindow.print();},1000);
+      return true;
+}
+
+// change theme
+$(".mdc-list-item:nth-child(2)").click(function() {
+  changeColor();
+});
+
+
+function changeColor() {
+  //get random color 
+  var colors = ['#845EC2','#FF6F91','#F9F871','#C34A36','#00C9A7','#2586A3','#E7BAFF'];
+  var color = colors[Math.floor(Math.random()*(8-1))];
+
+  document.documentElement.style.setProperty('--mdc-theme-primary', color);
+}
