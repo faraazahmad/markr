@@ -71,3 +71,19 @@ textarea {
 .markdown-body code {
     font-family: 'Roboto Mono', monospace;
 }
+
+.color-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+
+}
+
+.mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
+    background-color: transparent;
+}
+
+.mdc-list-item-list {
+    padding: 20px;
+}

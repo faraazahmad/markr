@@ -69,3 +69,47 @@ window.addEventListener("resize", function() {
         markdown.style.display = 'none';
     }
 });
+
+//handle save as PDF request
+
+$(".mdc-list-item:nth-child(1)").click(function() {
+  //print div#preview
+  Popup($('#preview')[0].outerHTML);
+});
+
+function Popup(data) {
+      var mywindow = window.open('', 'new div', 'height=400,width=600');
+      mywindow.document.write('<html><head><title></title>');
+      mywindow.document.write('<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">');
+      mywindow.document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.8.0/github-markdown.min.css">');
+      mywindow.document.write('<link rel="stylesheet" href="css/base.css" type="text/css" />');
+      mywindow.document.write('</head><body >');
+      mywindow.document.write(data);
+      mywindow.document.write('</body></html>');
+      mywindow.document.close();
+      mywindow.focus();
+      setTimeout(function(){mywindow.print();},1000);
+      return true;
+}
+
+// change theme
+
+// user pick up color
+
+
+$(".mdc-list-item-list").click(function(e) {
+  pickUp(e);
+});
+function pickUp(e){
+  var target = $(e.target);
+
+    if(target.is('.mdc-list-item-list:nth-child(1)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', '#3f51b5');
+    } else if (target.is('.mdc-list-item-list:nth-child(2)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'blueviolet');
+    } else if (target.is('.mdc-list-item-list:nth-child(3)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'indianred');
+    } else if (target.is('.mdc-list-item-list:nth-child(4)')){
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'grey');
+    }
+}
