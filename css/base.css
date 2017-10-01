@@ -71,3 +71,32 @@ textarea {
 .markdown-body code {
     font-family: 'Roboto Mono', monospace;
 }
+
+.color-wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+
+}
+
+.si.left {
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-color: #845EC2   ;
+}
+
+.si.mid {
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-color: #F9F871;
+}
+
+.si.right {
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    background-color: #2586A3;
+}

@@ -105,3 +105,19 @@ function changeColor() {
 
   document.documentElement.style.setProperty('--mdc-theme-primary', color);
 }
+// user pick up color
+$(".si").click(function(e) {
+  pickUp(e);
+});
+
+function pickUp(e){
+  var target = $(e.target);
+
+    if(target.is('.left')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', '#845EC2');
+    } else if (target.is('.mid')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', '#F9F871');
+    } else if (target.is('.right')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', '#2586A3');
+    }
+}
