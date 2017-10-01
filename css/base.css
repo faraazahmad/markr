@@ -80,23 +80,10 @@ textarea {
 
 }
 
-.si.left {
-    width: calc(100% / 3);
-    height: 100%;
-    float: left;
-    background-color: #845EC2   ;
+.mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled) {
+    background-color: transparent;
 }
 
-.si.mid {
-    width: calc(100% / 3);
-    height: 100%;
-    float: left;
-    background-color: #F9F871;
-}
-
-.si.right {
-    width: calc(100% / 3);
-    height: 100%;
-    float: left;
-    background-color: #2586A3;
+.mdc-list-item-list {
+    padding: 20px;
 }

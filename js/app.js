@@ -93,31 +93,23 @@ function Popup(data) {
 }
 
 // change theme
-$(".mdc-list-item:nth-child(2)").click(function() {
-  changeColor();
-});
 
-
-function changeColor() {
-  //get random color 
-  var colors = ['#845EC2','#FF6F91','#F9F871','#C34A36','#00C9A7','#2586A3','#E7BAFF'];
-  var color = colors[Math.floor(Math.random()*(8-1))];
-
-  document.documentElement.style.setProperty('--mdc-theme-primary', color);
-}
 // user pick up color
-$(".si").click(function(e) {
+
+
+$(".mdc-list-item-list").click(function(e) {
   pickUp(e);
 });
-
 function pickUp(e){
   var target = $(e.target);
 
-    if(target.is('.left')) {
-      document.documentElement.style.setProperty('--mdc-theme-primary', '#845EC2');
-    } else if (target.is('.mid')) {
-      document.documentElement.style.setProperty('--mdc-theme-primary', '#F9F871');
-    } else if (target.is('.right')) {
-      document.documentElement.style.setProperty('--mdc-theme-primary', '#2586A3');
+    if(target.is('.mdc-list-item-list:nth-child(1)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', '#3f51b5');
+    } else if (target.is('.mdc-list-item-list:nth-child(2)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'blueviolet');
+    } else if (target.is('.mdc-list-item-list:nth-child(3)')) {
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'indianred');
+    } else if (target.is('.mdc-list-item-list:nth-child(4)')){
+      document.documentElement.style.setProperty('--mdc-theme-primary', 'grey');
     }
 }
