@@ -16,7 +16,25 @@
             <strong>Markr</strong>
           </a>
         </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Themes
+            </a>
+          
+            <div class="navbar-dropdown is-right">
+              <a class="navbar-item">
+                Light
+              </a>
+              <a class="navbar-item">
+                Dark
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
+
       <div class="columns content">
         <textarea class="column" v-model="input" id="editor"></textarea>
         <div v-html="output" id="preview" class="column">Hello World</div>
