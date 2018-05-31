@@ -1,0 +1,25 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+body, html {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.header {
+    font-size: 0.75em;
+    padding: 0px 15px;
+}
+
+.content {
+    border: solid 1px #f6f9fa;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fafcfc
+}
+
+#editor, #preview {
+    width: 50%;
+    padding: 5px 10px;
+}
