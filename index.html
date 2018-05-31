@@ -15,17 +15,13 @@
           <a class="navbar-item" href="#">
             <strong>Markr</strong>
           </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
         </div>
       </nav>
       <div class="columns content">
-        <textarea class="column" :value="input" @input="update" id="editor"></textarea>
-        <div v-html="compiledMarkdown" id="preview" class="column"></div>
+        <textarea class="column" v-model="input" id="editor"></textarea>
+        <div id="preview" class="column">
+          {{ output }}
+        </div>
         </div>
       </div>
     </body>

@@ -1,17 +1,13 @@
 window.addEventListener('load', function() {
   new Vue({
-    el: '#editor',
+    el: '.content',
     data: {
-      input: '# hello'
+      input: '# hello',
+      output: ''
     },
-    computed: {
-      compiledMarkdown: function () {
-        return marked(this.input, { sanitize: true })
-      }
-    },
-    methods: {
-      update: function (e) {
-        this.input = e.target.value
+    watch: {
+      input: function(newInput) {
+        this.output = marked(newInput, { sanitize: true });
       }
     }
   });
