@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     },
     watch: {
       input: function(newInput) {
-        this.output = marked(newInput, { sanitize: true });
+        this.output = marked(newInput);
       }
     }
   });
