@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
   new Vue({
     el: '.content',
     data: {
-      input: '# hello',
+      input: '# Hello World',
       output: ''
     },
     watch: {
