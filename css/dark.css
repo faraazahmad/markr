@@ -8,7 +8,7 @@ body, html {
     color: #fff;
 }
 
-.navbar {
+.navbar *{
     color: #fff;
     background-color: #000;
 }
@@ -18,8 +18,18 @@ body, html {
     color: #eee;
 }
 
-.has-dropdown:hover {
-    background-color: #2b2b2b;
+/* Fix code below so that !important is not needed */
+.navbar-dropdown .navbar-item:hover {
+    background-color: #4b4b4b !important;
+    color: white !important;
+}
+
+.navbar-link {
+    background-color: transparent !important;
+}
+
+.navbar-link:hover, .navbar-link:active {
+    background-color: #2b2b2b !important;
 }
 
 .content {
