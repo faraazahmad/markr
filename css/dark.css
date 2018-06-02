@@ -1,0 +1,42 @@
+body, html {
+    background-color: #1b1b1b;
+}
+
+.navbar {
+    border-bottom: 1px solid #4b4b4b;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    color: #fff;
+    background-color: #000;
+}
+
+.navbar-dropdown, .navbar-dropdown *{
+    background-color: #1b1b1b;
+    color: #eee;
+}
+
+.has-dropdown:hover {
+    background-color: #2b2b2b;
+}
+
+.content {
+    background-color: #000;
+}
+
+#editor {
+    border-color: #000;
+    border-right: 1px solid #4b4b4b;
+    color: #fff;
+    background-color: #000;
+}
+
+#preview pre, code {
+    background-color: #2b2b2b;
+}
+
+#preview * {
+    color: #fff;
+}

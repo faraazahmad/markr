@@ -1,0 +1,16 @@
+body, html {
+    background-color: #EFF4FD;
+}
+
+.navbar {
+    border-bottom: 1px solid #eee;
+}
+
+.content {
+    background-color: #fff;
+}
+
+#editor {
+    border-right: 1px solid #eee;
+    color: #000;
+}

@@ -5,25 +5,22 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: "Nunito", sans-serif;
-    background-color : #EFF4FD;
-}
-
-.navbar {
-    border-bottom: 1px solid #eee;
 }
 
 .content {
     min-height: calc(100vh - 5em);
-    background-color: #fff;
 }
 
 #editor {
     font-family: monospace;
-    border-right: 1px solid #eee;
     padding: 1.1em;
     font-size: 1.1em;
 }
 
 #preview {
     padding: 1em;
+}
+
+pre, code {
+    border-radius: 2.5px;
 }
