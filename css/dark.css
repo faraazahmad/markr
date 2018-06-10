@@ -50,3 +50,8 @@ body, html {
 #preview * {
     color: #fff;
 }
+
+blockquote {
+    background-color: #1b1b1b !important;
+    border-color: #2b2b2b !important;
+}

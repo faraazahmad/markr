@@ -21,6 +21,6 @@ body, html {
     padding: 1em;
 }
 
-pre, code {
+pre, code, blockquote {
     border-radius: 2.5px;
 }
