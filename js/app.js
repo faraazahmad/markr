@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
 
 function changeTheme(themeNumber) {
   // get css theme tag
-  let themeTag = document.querySelectorAll('link')[2];
+  let themeTag = document.querySelectorAll('link')[3];
   if (themeNumber == 0) {
     // change to dark
     themeTag.setAttribute('href', 'css/dark.css');

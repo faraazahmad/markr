@@ -15,6 +15,5 @@ body, html {
     color: #000;
 }
 .sidebar {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    background-color: #eee;
 }
