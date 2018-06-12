@@ -25,3 +25,21 @@ function changeTheme(themeNumber) {
     themeTag.setAttribute('href', 'css/light.css');
   }
 }
+
+function slideToggle() {
+  var el = document.querySelector('.sidebar');
+  
+  if(el.classList.contains("open")) {
+    let domNode = anime({
+      targets: el,
+      translateX: -250
+    });
+  }
+  else {
+    let domNode = anime({
+      targets: el,
+      translateX: 250
+    });
+  }
+  el.classList.toggle("open");
+}

@@ -14,3 +14,7 @@ body, html {
     border-right: 1px solid #eee;
     color: #000;
 }
+.sidebar {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+}

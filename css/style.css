@@ -24,3 +24,13 @@ body, html {
 pre, code, blockquote {
     border-radius: 2.5px;
 }
+
+.sidebar {
+    height: calc(100vh - 30px);
+    padding: 1em;
+    position: fixed;
+    top: 30px;
+    bottom: 0;
+    z-index: 999;
+    left: -250px;
+}
