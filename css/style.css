@@ -27,10 +27,15 @@ pre, code, blockquote {
 
 .sidebar {
     height: calc(100vh - 30px);
-    padding: 1em 5em 1em 1em;
+    padding: 1em 0em 1em 1em;
     position: fixed;
     top: 52.5px;
     bottom: 0;
+    width: 250px;
     z-index: 999;
     left: -250px;
+}
+
+.sidebar .heading {
+    margin-bottom: 1em;
 }

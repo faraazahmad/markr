@@ -12,11 +12,38 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/light.css">
     <script src="js/app.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
     <body>
 
       <div class="sidebar">
-        This is a sidebar
+        <h1 class="heading is-size-4">Settings</h1>
+
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Theme</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">
+                Light
+              </a>
+              <a class="dropdown-item">
+                Dark
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item">
+                Suggest a theme ...
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -24,7 +51,7 @@
           <a class="navbar-item" href="#" onclick="slideToggle()">
             <i class="fas fa-bars"></i>
           </a>
-          <a class="navbar-item" href="#">
+          <a class="is-size-4 navbar-item" href="#">
             <strong>Markr</strong>
           </a>
         </div>
