@@ -31,14 +31,14 @@
           </div>
           <div class="dropdown-menu" id="dropdown-menu" role="menu">
             <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                Light
-              </a>
-              <a class="dropdown-item">
+              <a class="dropdown-item" onclick="changeTheme(0)">
                 Dark
               </a>
+              <a href="#" class="dropdown-item" onclick="changeTheme(1)">
+                Light
+              </a>
               <hr class="dropdown-divider">
-              <a href="#" class="dropdown-item">
+              <a href="https://github.com/faraazahmad/markr/issues" class="dropdown-item">
                 Suggest a theme ...
               </a>
             </div>
@@ -54,23 +54,6 @@
           <a class="is-size-4 navbar-item" href="#">
             <strong>Markr</strong>
           </a>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Themes
-            </a>
-          
-            <div class="navbar-dropdown is-right">
-              <a class="navbar-item" onclick="changeTheme(0)">
-                Dark
-              </a>
-              <a class="navbar-item" onclick="changeTheme(1)">
-                Light
-              </a>
-            </div>
-          </div>
         </div>
       </nav>
 

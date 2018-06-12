@@ -60,3 +60,25 @@ blockquote {
     background-color: #2b2b2b;
     color: #fff;
 }
+
+.dropdown-trigger *, .dropdown-menu * {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+.dropdown-menu {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05)
+}
+
+.dropdown-trigger button {
+    border-color: #1b1b1b;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.dropdown-divider {
+    background-color: #4b4b4b !important;
+}
