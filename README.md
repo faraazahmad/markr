@@ -18,7 +18,7 @@ The `css` folder in the root directory contains all the necessary CSS files for 
 The `js` folder contains all the Javascript files needed to extend the functionality of the project.
 
 ### HTML
-All the layout needed by the project is put in html. As the project grows, there may be multiple html files which will then be put into a serparate `html` folder. But for now, there is only `index.html` in the root directory.
+All the layout required by the project is put in html. As the project grows, there may be multiple html files which will then be put into a serparate `html` folder. But for now, there is only one file `index.html` in the root directory.
 
 ## Opening an issue
 If you find a bug or feel like you want a new theme, feel free to open an issue with a detailed description about the issue.
